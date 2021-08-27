@@ -1,0 +1,315 @@
+{
+    "name" : "商城",
+    "appid" : "",
+    "description" : "",
+    "versionName" : "1.0",
+    "versionCode" : 117,
+    "transformPx" : false,
+    "app-plus" : {
+        "compatible" : {
+            "ignoreVersion" : true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持
+        },
+        /* 5+App特有相关 */
+        "usingComponents" : true,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "modules" : {
+            "Payment" : {},
+            "OAuth" : {},
+            "Share" : {},
+            "Statistic" : {}
+        },
+        /* 模块配置 */
+        "distribute" : {
+            /* 应用发布信息 */
+            "android" : {
+                /* android打包配置 */
+                "targetSdkVersion" : 30, //apk的目标sdk版本默认值为21，最低值为26
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>"
+                ]
+            },
+            "ios" : {
+                "urlschemewhitelist" : "weixin",
+                "idfa" : false,
+                "capabilities" : {
+                    "entitlements" : {
+                        "com.apple.developer.associated-domains" : [ "" ]
+                    }
+                }
+            },
+            /* ios打包配置 */
+            "sdkConfigs" : {
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "",
+                        "appsecret" : "",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "ad" : {},
+                "share" : {
+                    "weixin" : {
+                        "appid" : "",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "push" : {},
+                "statics" : {
+                    "umeng" : {
+                        "appkey_ios" : "",
+                        "channelid_ios" : "",
+                        "appkey_android" : "",
+                        "channelid_android" : ""
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "useOriginalMsgbox" : false
+            }
+        },
+        "nativePlugins" : {
+            "JG-JCore" : {
+                "JPUSH_APPKEY_ANDROID" : "",
+                "JPUSH_APPKEY_IOS" : "",
+                "JPUSH_CHANNEL_ANDROID" : "",
+                "JPUSH_CHANNEL_IOS" : "",
+                "__plugin_info__" : {
+                    "name" : "极光JCore官方SDK",
+                    "description" : "极光JCore官方SDK HBuilder插件版本",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=4028",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "4028",
+                    "parameters" : {
+                        "JPUSH_APPKEY_ANDROID" : {
+                            "des" : "[Android]极光portal配置应用信息时分配的AppKey",
+                            "key" : "JPUSH_APPKEY",
+                            "value" : ""
+                        },
+                        "JPUSH_APPKEY_IOS" : {
+                            "des" : "[iOS]极光portal配置应用信息时分配的AppKey",
+                            "key" : "JCore:APP_KEY",
+                            "value" : ""
+                        },
+                        "JPUSH_CHANNEL_ANDROID" : {
+                            "des" : "[Android]用于统计分发渠道，不需要可填默认值developer-default",
+                            "key" : "JPUSH_CHANNEL",
+                            "value" : ""
+                        },
+                        "JPUSH_CHANNEL_IOS" : {
+                            "des" : "[iOS]用于统计分发渠道，不需要可填默认值developer-default",
+                            "key" : "JCore:CHANNEL",
+                            "value" : ""
+                        }
+                    }
+                }
+            },
+            "JG-JPush" : {
+                "JPUSH_ADVERTISINGID_IOS" : "false",
+                "JPUSH_DEFAULTINITJPUSH_IOS" : "true",
+                "JPUSH_ISPRODUCTION_IOS" : "true",
+                "JPUSH_MEIZU_APPID" : "",
+                "JPUSH_MEIZU_APPKEY" : "",
+                "JPUSH_OPPO_APPID" : "",
+                "JPUSH_OPPO_APPKEY" : "",
+                "JPUSH_OPPO_APPSECRET" : "",
+                "JPUSH_VIVO_APPID" : "",
+                "JPUSH_VIVO_APPKEY" : "",
+                "JPUSH_XIAOMI_APPID" : "",
+                "JPUSH_XIAOMI_APPKEY" : "",
+                "__plugin_info__" : {
+                    "name" : "极光JPush官方SDK",
+                    "description" : "极光JPush官方SDK HBuilder插件版本",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=4035",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "4035",
+                    "parameters" : {
+                        "JPUSH_ADVERTISINGID_IOS" : {
+                            "des" : "[iOS]广告标识符（IDFA）如果不需要使用IDFA，可不填",
+                            "key" : "JPush:ADVERTISINGID",
+                            "value" : ""
+                        },
+                        "JPUSH_DEFAULTINITJPUSH_IOS" : {
+                            "des" : "[iOS]是否默认初始化，是填true，不是填false或者不填",
+                            "key" : "JPush:DEFAULTINITJPUSH",
+                            "value" : ""
+                        },
+                        "JPUSH_ISPRODUCTION_IOS" : {
+                            "des" : "[iOS]是否是生产环境，是填true，不是填false或者不填",
+                            "key" : "JPush:ISPRODUCTION",
+                            "value" : ""
+                        },
+                        "JPUSH_MEIZU_APPID" : {
+                            "des" : "厂商MEIZU-appId,示例：MZ-12345678",
+                            "key" : "MEIZU_APPID",
+                            "value" : ""
+                        },
+                        "JPUSH_MEIZU_APPKEY" : {
+                            "des" : "厂商MEIZU-appKey,示例：MZ-12345678",
+                            "key" : "MEIZU_APPKEY",
+                            "value" : ""
+                        },
+                        "JPUSH_OPPO_APPID" : {
+                            "des" : "厂商OPPO-appId,示例：OP-12345678",
+                            "key" : "OPPO_APPID",
+                            "value" : ""
+                        },
+                        "JPUSH_OPPO_APPKEY" : {
+                            "des" : "厂商OPPO-appkey,示例：OP-12345678",
+                            "key" : "OPPO_APPKEY",
+                            "value" : ""
+                        },
+                        "JPUSH_OPPO_APPSECRET" : {
+                            "des" : "厂商OPPO-appSecret,示例：OP-12345678",
+                            "key" : "OPPO_APPSECRET",
+                            "value" : ""
+                        },
+                        "JPUSH_VIVO_APPID" : {
+                            "des" : "厂商VIVO-appId,示例：12345678",
+                            "key" : "com.vivo.push.app_id",
+                            "value" : ""
+                        },
+                        "JPUSH_VIVO_APPKEY" : {
+                            "des" : "厂商VIVO-appkey,示例：12345678",
+                            "key" : "com.vivo.push.api_key",
+                            "value" : ""
+                        },
+                        "JPUSH_XIAOMI_APPID" : {
+                            "des" : "厂商XIAOMI-appId,示例：MI-12345678",
+                            "key" : "XIAOMI_APPID",
+                            "value" : ""
+                        },
+                        "JPUSH_XIAOMI_APPKEY" : {
+                            "des" : "厂商XIAOMI-appKey,示例：MI-12345678",
+                            "key" : "XIAOMI_APPKEY",
+                            "value" : ""
+                        }
+                    }
+                }
+            }
+        },
+        "privacy" : {
+            "prompt" : "template",
+            "template" : {
+                "title" : "温馨提示",
+                "message" : "亲，感谢您对商城一直以来的信任！<br/>为了更好的保护您的权益，同时遵守相关监管要求，我们更新了<a href=\"https://\">《商城隐私政策》</a>，特向您说明如下：<br/>1、为向您提供交易相关功能，我们会收集、使用必要的信息；<br/>2、基于您的明示授权，我们可能会获取您的设备ID等信息，您有权拒绝或取消授权；<br/>3、未经您同意，我们不会从第三方处获取、共享或向其提供您的信息；<br/>4、我们会不断完善技术和安全管理，保护您的个人信息；<br/>如您同意我们的政策内容，请点击同意并继续使用本软件。",
+                "buttonAccept" : "同意",
+                "buttonRefuse" : "不同意",
+                "second" : {
+                    "title" : "温馨提示",
+                    "message" : "进入应用前，您需要同意<a href=\"https://\">《商城隐私政策》</a>才能继续使用我们的服务哦，否则将退出应用。",
+                    "buttonAccept" : "同意并继续",
+                    "buttonRefuse" : "退出应用"
+                }
+            }
+        }
+    },
+    /* SDK配置 */
+    "quickapp" : {},
+    /* 快应用特有相关 */
+    "mp-weixin" : {
+        /* 微信小程序特有相关 */
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : false,
+            "minified" : true
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "mp-qq" : {
+        "usingComponents" : true
+    },
+    "h5" : {
+        "devServer" : {
+            "port" : 8080
+        }
+    }
+}

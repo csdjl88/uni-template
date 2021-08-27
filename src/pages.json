@@ -1,0 +1,118 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/welcome/welcome",
+			"style": {
+				"navigationBarTitleText": "欢迎页"
+			}
+		},
+		{
+			"path": "pages/mall/mall",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/goods/goods_category/goods_category",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+
+
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/user_center/user_center",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": true
+			}
+		},
+
+		{
+			"path": "pages/user/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+		},
+		 {
+			"path": "pages/web_view/web_view",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}
+		// #ifdef APP-PLUS || H5
+		,
+		{
+			"path" : "pages/mock/mock",
+			"style" :
+			{
+				"navigationBarTitleText": "mock数据",
+				"enablePullDownRefresh": false
+			}
+		}
+		// #endif
+		//,
+
+
+	],
+	"tabBar": {
+		"backgroundColor": "#fff",
+		"selectedColor": "#CD001E",
+		"color": "#656565",
+		"position": "bottom",
+		"list": [{
+				"pagePath": "pages/mall/mall",
+				"iconPath": "static/footer/icon/home1.png",
+				"selectedIconPath": "static/footer/icon/home1-on.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/goods/goods_category/goods_category",
+				"iconPath": "static/footer/icon/sousuono-80.png",
+				"selectedIconPath": "static/footer/icon/sousuo-80.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/cart/cart",
+				"iconPath": "static/footer/icon/catno-80.png",
+				"selectedIconPath": "static/footer/icon/cat-80.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/user/user_center/user_center",
+				"iconPath": "static/footer/icon/wodeno-80.png",
+				"selectedIconPath": "static/footer/icon/wode-80.png",
+				"text": "我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "商城",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}
